@@ -33,15 +33,3 @@ subjects:
 {{- end -}}
 {{- end -}}
 {{- end -}}
---- 
-kind: ClusterRoleBinding
-metadata:
-  name: kyverno-nirmata-reports-controller-binding ## additional CRB for Razorpay clusters
-subjects:
-- kind: ServiceAccount
-  name: kyverno-reports-controller
-  namespace: kyverno
-roleRef:
-  kind: ClusterRole
-  name: kyverno-nirmata-reports-controller-role
-  apiGroup: rbac.authorization.k8s.io
