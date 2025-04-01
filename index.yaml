@@ -1,0 +1,65 @@
+apiVersion: v1
+entries:
+  kyverno:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: added
+          description: Add a key to preserve configmap settings during upgrade
+        - kind: added
+          description: Make admission reports breaker threshold configurable
+        - kind: added
+          description: ImagePullSecrets made globally configurable
+        - kind: removed
+          description: Deprecated configuration `features.reports.chunkSize` was removed
+        - kind: added
+          description: ImagePullSecrets made configurable for tests
+      artifacthub.io/links: |
+        - name: Documentation
+          url: https://kyverno.io/docs
+      artifacthub.io/operator: "false"
+      artifacthub.io/prerelease: "false"
+    apiVersion: v2
+    appVersion: v1.13.2-n4k.nirmata.3
+    created: "2025-04-01T19:37:59.874268+05:30"
+    dependencies:
+    - condition: reports-server.enabled
+      name: reports-server
+      repository: https://nirmata.github.io/reports-server
+      version: 0.1.5
+    - condition: grafana.enabled
+      name: grafana
+      repository: ""
+      version: 3.3.4
+    - condition: crds.install
+      name: crds
+      repository: ""
+      version: 3.3.4
+    description: Kubernetes Native Policy Management
+    digest: 0e815ef2d4aec22d3745ad63d642a841aab4454a3023865fda480b0628f25386
+    home: https://kyverno.io/
+    icon: https://github.com/kyverno/kyverno/raw/main/img/logo.png
+    keywords:
+    - kubernetes
+    - nirmata
+    - policy agent
+    - policy
+    - validating webhook
+    - admission controller
+    - mutation
+    - mutate
+    - validate
+    - generate
+    - supply chain
+    - security
+    kubeVersion: '>=1.22.0-0'
+    maintainers:
+    - name: Nirmata
+      url: https://kyverno.io/
+    name: kyverno
+    sources:
+    - https://github.com/nirmata/enterprise-kyverno
+    type: application
+    urls:
+    - https://github.com/ShubhamHirau/kyverno.git/kyverno-3.3.2.tgz
+    version: 3.3.2
+generated: "2025-04-01T19:37:59.852389+05:30"
