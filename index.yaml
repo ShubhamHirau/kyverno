@@ -60,6 +60,6 @@ entries:
     - https://github.com/nirmata/enterprise-kyverno
     type: application
     urls:
-    - https://github.com/ShubhamHirau/kyverno/kyverno-3.3.2.tgz
+    - https://shubhamhirau.github.io/kyverno/kyverno-3.3.2.tgz 
     version: 3.3.2
 generated: "2025-04-01T19:52:31.018828+05:30"
